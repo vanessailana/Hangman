@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hangman Game</title>
+
+
+</head>
+
+
+</head>
+<body>
+<center>
+<pre></pre>
+<pre></pre>
+<br> </br>
+<br> </br>
+
+<h1> Let's play Hangman </h1>
+<h2> Tetris is better </h2>
+<h3> The goal is to win, but I doubt you will  </h3>
+<h3> So guess right and be smart </h3>
+<h3> You just used:  <p id="guesses" style="color:purple;"> </p> 
+
+<h3> Whats the probablity you win? Very slim because this game is actaully hard to win </h3>
+
+
+<h1> Wrong Letters: </h1>
+
+<p id="ed" style="color:purple;"> </p>
+<h1> The Word is </h1>
+<p id="gabe" style="color:red;font-size:50px"> </p>
+<h2 style="font-size: 50px"> The story of a Man Called HangMan </h2>
+<p id="story" style="color:orange;font-size:25px"> </p>
+
+
+<center>
+
+<div class="row">
+<button class="button1" onclick="location.reload()" style="background-color: green; border: none;color: white;padding: 15px 32px;"> <b> START A NEW DUMB GAME </br> </button>
+<button class="button1" onclick="hint()" style="background-color:pink; border: none;color: white;padding: 15px 32px;"> <b> A SPECIAL HINT </br> </button>
+</div>
+<p> </p>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('Q');this.style.visibility='hidden';"> Q</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('W');this.style.visibility='hidden';"> W</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('E');this.style.visibility='hidden';"> E</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('R');this.style.visibility='hidden';"> R</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('T');this.style.visibility='hidden';"> T</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('Y');this.style.visibility='hidden';"> Y</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('U');this.style.visibility='hidden';"> U</button>
+
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('I');this.style.visibility='hidden';"> I</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('O');this.style.visibility='hidden';"> O</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('P');this.style.visibility='hidden';"> P</button>
+</center>
+
+
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('A');this.style.visibility='hidden';"> A</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('S');this.style.visibility='hidden';"> S</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('D');this.style.visibility='hidden';"> D</button>
+
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('F');this.style.visibility='hidden';"> F</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('G');this.style.visibility='hidden';"> G</button>
+
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('H');this.style.visibility='hidden';"> H</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('J');this.style.visibility='hidden';"> J</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('K');this.style.visibility='hidden';"> K</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('L');this.style.visibility='hidden';"> L</button>
+</div>
+
+
+<div class="row">
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('Z');this.style.visibility='hidden';"> Z</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('X');this.style.visibility='hidden';"> X</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('C');this.style.visibility='hidden';"> C</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('V');this.style.visibility='hidden';"> V</button>
+
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('B');this.style.visibility='hidden';"> B</button>
+
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('N');this.style.visibility='hidden';"> N</button>
+
+<button type="button" style="color:pink;background-color:white;padding-bottom: 10px;padding-top: 10px;padding-right:10px; width:100px"  onclick="guess('M');this.style.visibility='hidden';"> M</button>
+
+</div>
+
+
+
+
+
+
+<script src="Hangman.js">
+</script>
+
+</center>
+
+</body>
+</html>
+     
